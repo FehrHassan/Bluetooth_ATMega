@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TurnOnOrOffActivity">
+
+    <TextView
+        android:id="@+id/info_motor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/off"
+        android:textSize="15sp"
+        android:text="Control the motor speed"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:textColor="@android:color/black"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/off"
+        android:text="Off"
+        android:layout_above="@id/info"
+        android:layout_marginBottom="15dp"
+        android:layout_toStartOf="@id/fifty"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fifty"
+        android:text="50%"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/info"
+        android:layout_marginBottom="15dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hundred"
+        android:text="100%"
+        android:layout_above="@id/info"
+        android:layout_marginBottom="15dp"
+        android:layout_toEndOf="@id/fifty"/>
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_centerInParent="true"
+
+        />
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button"
+        android:textSize="15sp"
+        android:text="Toggle the button to toggle the led"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:textColor="@android:color/black"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/getTemperature"
+        android:text="Get Temperature"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/button"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/temperature_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/getTemperature"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/black"
+        tools:text="Temp is: 37"
+        />
+
+    <TextView
+        android:id="@+id/text_received_from_BT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temperature_text_view"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/black"
+        tools:text=""/>
+
+</RelativeLayout>
